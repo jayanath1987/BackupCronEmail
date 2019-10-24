@@ -1,0 +1,12 @@
+mkdir /Data/backup
+
+mkdir /Data/backup/dbbackup/
+
+vim /Data/backup/mysql-backup.sh
+
+chmod +x /Data/backup/mysql-backup.sh
+
+/Data/backup/mysql-backup.sh
+
+crontab -e
+15 2 * * * /Data/backup/mysql-backup.sh
